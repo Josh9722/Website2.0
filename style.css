@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -22,17 +24,25 @@ h1 {
 /* SECTION STYLES */
 /* Section styles */
 .section {
-    padding: 50px 20px;
     min-height: 100vh; /* Each section will take up at least the full height of the viewport */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* This centers the section content vertically */
+    display: block;
+    padding: 2em;
 }
 
 .home-section {
+    background-color: #272c46;
+    min-width: 80%;
+    min-height: 90%;
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), 0 6px 20px rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+
     /* Center Text */
+    display: flex;
     text-align: center;
     justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
     /* Centers content vertically */
 }
 
@@ -40,7 +50,7 @@ h1 {
 /* Cursor styles */
 #typing::after {
     content: '|';
-    color: #629755; /* Cursor color */
+    color: grey; /* Cursor color */
     font-weight: bold;
     animation: blink 0.7s infinite step-start;
 }
