@@ -16,6 +16,53 @@ body, html {
     flex-direction: column;
 }
 
+/* HEADER STYLES */
+header {
+    background-color: #272c46;
+    /* Dark shade for contrast */
+    color: #ffffff;
+    position: fixed;
+    /* Keeps the header at the top */
+    width: 100%;
+    z-index: 1000;
+    /* Ensures header is above other content */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    /* Adjusts the padding around the content */
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    /* Spacing between links */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4A90E2;
+    /* Highlight color on hover */
+}
+
+/* Sticky header offset for section content */
+.section {
+    padding-top: 80px;
+    /* Adjust based on header height */
+}
+
 h1 {
     font-size: 2em;
     margin-bottom: 0.5em;
