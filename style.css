@@ -22,10 +22,19 @@ header {
     /* Dark shade for contrast */
     color: #ffffff;
     position: fixed;
-    /* Keeps the header at the top */
+    
     width: 100%;
     z-index: 1000;
-    /* Ensures header is above other content */
+    
+    transition: opacity 0.5s ease, top 0.5s ease;
+    top:-100px;
+    visibility: hidden;
+}
+
+header.visible { 
+    
+    visibility: visible;
+    top: 0;    /* For sliding effect */
 }
 
 .navbar {
@@ -57,11 +66,6 @@ header {
     /* Highlight color on hover */
 }
 
-/* Sticky header offset for section content */
-.section {
-    padding-top: 80px;
-    /* Adjust based on header height */
-}
 
 h1 {
     font-size: 2em;
@@ -73,7 +77,7 @@ h1 {
 .section {
     min-height: 100vh; /* Each section will take up at least the full height of the viewport */
     display: block;
-    padding: 2em;
+    padding: 2em; 
 }
 
 .home-section {
@@ -91,6 +95,10 @@ h1 {
     flex-wrap: nowrap;
     align-items: center;
     /* Centers content vertically */
+}
+
+.about-section { 
+    padding-top: 5em;
 }
 
 /* ANIMATIONS */

@@ -17,11 +17,28 @@ function typeAnimation() {
     // No else part needed, typing is complete
 }
 
-// Pre-loader functionality
-window.addEventListener('load', function () {
-    document.getElementById('preloader').style.display = 'none';
-});
-
 document.addEventListener("DOMContentLoaded", function () {
+    // Initiate typing animation
     typeAnimation();
+
+    // Pre-loader functionality
+    document.getElementById('preloader').style.display = 'none';
+
+    // Header show/hide functionality
+    var aboutMeSection = document.getElementById("about-me");
+    var header = document.querySelector("header");
+
+    window.addEventListener("scroll", function () {
+        var homeSection = document.getElementById("home"); // Target the "Home" section
+        var sectionTop = homeSection.offsetTop; // Get the position of the "Home" section
+        var sectionHeight = homeSection.offsetHeight; // Height of the "Home" section
+
+        // Check if the page is scrolled beyond the "Home" section
+        if (window.scrollY > sectionTop + sectionHeight) {
+            header.classList.add("visible"); // Show the header
+        } else {
+            header.classList.remove("visible"); // Hide the header
+        }
+    });
+
 });
